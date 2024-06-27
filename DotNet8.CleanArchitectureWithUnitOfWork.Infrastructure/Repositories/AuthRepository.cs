@@ -2,31 +2,25 @@
 using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Models;
 using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Models.Auth;
 using DotNet8.CleanArchitectureWithUnitOfWork.Infrastructure.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DotNet8.CleanArchitectureWithUnitOfWork.Infrastructure.Repositories
+namespace DotNet8.CleanArchitectureWithUnitOfWork.Infrastructure.Repositories;
+
+public class AuthRepository : IAuthRepository
 {
-    public class AuthRepository : IAuthRepository
+    private readonly AppDbContext _context;
+
+    public AuthRepository(AppDbContext context)
     {
-        private readonly AppDbContext _context;
+        _context = context;
+    }
 
-        public AuthRepository(AppDbContext context)
-        {
-            _context = context;
-        }
+    public Task<Result<AuthResponseModel>> Login(LoginRequestModel requestModel)
+    {
+        throw new NotImplementedException();
+    }
 
-        public Task<Result<AuthResponseModel>> Login(LoginRequestModel requestModel)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Result<AuthResponseModel>> Register(RegisterRequestModel requestModel)
-        {
-            throw new NotImplementedException();
-        }
+    public Task<Result<AuthResponseModel>> Register(RegisterRequestModel requestModel)
+    {
+        throw new NotImplementedException();
     }
 }
