@@ -1,7 +1,4 @@
-﻿using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Interfaces;
-using Microsoft.AspNetCore.Mvc;
-
-namespace DotNet8.CleanArchitectureWithUnitOfWork.Api.Features.Blog;
+﻿namespace DotNet8.CleanArchitectureWithUnitOfWork.Api.Features.Blog;
 
 [Route("api/[controller]")]
 [ApiController]

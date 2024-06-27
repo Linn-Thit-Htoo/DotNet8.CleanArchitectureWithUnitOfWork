@@ -19,9 +19,7 @@ public class BlogRepository : IBlogRepository
         Result<BlogListResponseModel> responseModel;
         try
         {
-            var lst = await _context.TblBlogs
-                .OrderByDescending(x => x.BlogId)
-                .ToListAsync();
+            var lst = await _context.TblBlogs.OrderByDescending(x => x.BlogId).ToListAsync();
 
             var model = new BlogListResponseModel { Blogs = lst.Select(x => x.Change()).ToList() };
 
