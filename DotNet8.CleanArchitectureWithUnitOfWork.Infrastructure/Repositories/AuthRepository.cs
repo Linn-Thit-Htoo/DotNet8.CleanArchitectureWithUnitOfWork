@@ -1,9 +1,4 @@
-﻿using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Interfaces;
-using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Models;
-using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Models.Auth;
-using DotNet8.CleanArchitectureWithUnitOfWork.Infrastructure.Entities;
-
-namespace DotNet8.CleanArchitectureWithUnitOfWork.Infrastructure.Repositories;
+﻿namespace DotNet8.CleanArchitectureWithUnitOfWork.Infrastructure.Repositories;
 
 public class AuthRepository : IAuthRepository
 {

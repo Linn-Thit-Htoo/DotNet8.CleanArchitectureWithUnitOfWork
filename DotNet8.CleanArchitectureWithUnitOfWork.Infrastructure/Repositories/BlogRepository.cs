@@ -1,7 +1,4 @@
-﻿using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Interfaces;
-using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Models;
-using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Models.Blog;
-using DotNet8.CleanArchitectureWithUnitOfWork.Infrastructure.Entities;
+﻿using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Models.Blog;
 
 namespace DotNet8.CleanArchitectureWithUnitOfWork.Infrastructure.Repositories;
 

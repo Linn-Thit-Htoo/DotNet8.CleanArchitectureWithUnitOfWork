@@ -1,5 +1,4 @@
 ﻿using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Models.Blog;
-using DotNet8.CleanArchitectureWithUnitOfWork.Infrastructure.Entities;
 
 namespace DotNet8.CleanArchitectureWithUnitOfWork.Infrastructure;
 
