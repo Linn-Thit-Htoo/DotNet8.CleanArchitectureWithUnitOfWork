@@ -1,32 +1,30 @@
 ﻿using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Interfaces;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DotNet8.CleanArchitectureWithUnitOfWork.Api.Features.Blog
+namespace DotNet8.CleanArchitectureWithUnitOfWork.Api.Features.Blog;
+
+[Route("api/[controller]")]
+[ApiController]
+public class BlogController : BaseController
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class BlogController : BaseController
+    private IUnitOfWork _unitOfWork;
+
+    public BlogController(IUnitOfWork unitOfWork)
     {
-        private IUnitOfWork _unitOfWork;
+        _unitOfWork = unitOfWork;
+    }
 
-        public BlogController(IUnitOfWork unitOfWork)
+    [HttpGet]
+    public async Task<IActionResult> GetBlogs()
+    {
+        try
         {
-            _unitOfWork = unitOfWork;
+            var result = await _unitOfWork.BlogRepository.GetBlogs();
+            return Content(result);
         }
-
-        [HttpGet]
-        public async Task<IActionResult> GetBlogs()
+        catch (Exception ex)
         {
-            try
-            {
-                var result = await _unitOfWork.BlogRepository.GetBlogs();
-                return Content(result);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+            return InternalServerError(ex);
         }
     }
 }
