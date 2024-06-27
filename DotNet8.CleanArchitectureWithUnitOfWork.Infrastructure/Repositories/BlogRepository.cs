@@ -1,6 +1,4 @@
-﻿using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Models.Blog;
-
-namespace DotNet8.CleanArchitectureWithUnitOfWork.Infrastructure.Repositories;
+﻿namespace DotNet8.CleanArchitectureWithUnitOfWork.Infrastructure.Repositories;
 
 public class BlogRepository : IBlogRepository
 {
