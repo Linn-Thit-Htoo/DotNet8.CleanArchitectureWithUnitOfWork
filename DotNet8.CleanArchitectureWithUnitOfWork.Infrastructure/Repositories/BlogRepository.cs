@@ -1,5 +1,4 @@
-﻿using DotNet8.CleanArchitectureWithUnitOfWork.Api;
-using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Interfaces;
+﻿using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Interfaces;
 using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Models;
 using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Models.Blog;
 using DotNet8.CleanArchitectureWithUnitOfWork.Infrastructure.Entities;
