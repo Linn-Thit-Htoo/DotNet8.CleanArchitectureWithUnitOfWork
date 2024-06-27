@@ -1,8 +1,7 @@
-﻿namespace DotNet8.CleanArchitectureWithUnitOfWork.Domain.Interfaces
+﻿namespace DotNet8.CleanArchitectureWithUnitOfWork.Domain.Interfaces;
+
+public interface IAuthRepository
 {
-    public interface IAuthRepository
-    {
-        Task<Result<AuthResponseModel>> Login(LoginRequestModel requestModel);
-        Task<Result<AuthResponseModel>> Register(RegisterRequestModel requestModel);
-    }
+    Task<Result<AuthResponseModel>> Login(LoginRequestModel requestModel);
+    Task<Result<AuthResponseModel>> Register(RegisterRequestModel requestModel);
 }
