@@ -3,7 +3,6 @@ using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Interfaces;
 using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Models;
 using DotNet8.CleanArchitectureWithUnitOfWork.Domain.Models.Blog;
 using DotNet8.CleanArchitectureWithUnitOfWork.Infrastructure.Entities;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
