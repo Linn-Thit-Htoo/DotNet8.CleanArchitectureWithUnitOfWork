@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace DotNet8.CleanArchitectureWithUnitOfWork.Domain.Interfaces;
 
-namespace DotNet8.CleanArchitectureWithUnitOfWork.Domain.Interfaces
+public interface IUnitOfWork
 {
-    public interface IUnitOfWork
-    {
-        IAuthRepository AuthRepository { get; }
-        IBlogRepository BlogRepository { get; }
-    }
+    IAuthRepository AuthRepository { get; }
+    IBlogRepository BlogRepository { get; }
 }
