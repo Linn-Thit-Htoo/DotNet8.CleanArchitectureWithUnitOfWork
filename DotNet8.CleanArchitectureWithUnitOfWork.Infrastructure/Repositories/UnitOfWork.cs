@@ -1,4 +1,6 @@
-﻿namespace DotNet8.CleanArchitectureWithUnitOfWork.Infrastructure.Repositories;
+﻿using Microsoft.Extensions.DependencyInjection;
+
+namespace DotNet8.CleanArchitectureWithUnitOfWork.Infrastructure.Repositories;
 
 public class UnitOfWork : IUnitOfWork
 {
@@ -8,12 +10,15 @@ public class UnitOfWork : IUnitOfWork
 
     private readonly AppDbContext _context;
 
-    public UnitOfWork(AppDbContext context)
+    private readonly IServiceProvider _serviceProvider;
+
+    public UnitOfWork(AppDbContext context, IServiceProvider serviceProvider)
     {
         _context = context;
+        _serviceProvider = serviceProvider;
     }
 
-    public IAuthRepository AuthRepository => _authRepository ??= new AuthRepository(_context);
+    public IAuthRepository AuthRepository => _authRepository ??= _serviceProvider.GetRequiredService<IAuthRepository>();
 
-    public IBlogRepository BlogRepository => _blogRepository ??= new BlogRepository(_context);
+    public IBlogRepository BlogRepository => _blogRepository ??= _serviceProvider.GetRequiredService<IBlogRepository>();
 }
