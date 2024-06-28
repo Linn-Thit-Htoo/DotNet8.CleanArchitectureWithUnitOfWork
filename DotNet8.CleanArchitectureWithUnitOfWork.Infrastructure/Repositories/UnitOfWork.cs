@@ -15,7 +15,9 @@ public class UnitOfWork : IUnitOfWork
         _serviceProvider = serviceProvider;
     }
 
-    public IAuthRepository AuthRepository => _authRepository ??= _serviceProvider.GetRequiredService<IAuthRepository>();
+    public IAuthRepository AuthRepository =>
+        _authRepository ??= _serviceProvider.GetRequiredService<IAuthRepository>();
 
-    public IBlogRepository BlogRepository => _blogRepository ??= _serviceProvider.GetRequiredService<IBlogRepository>();
+    public IBlogRepository BlogRepository =>
+        _blogRepository ??= _serviceProvider.GetRequiredService<IBlogRepository>();
 }
