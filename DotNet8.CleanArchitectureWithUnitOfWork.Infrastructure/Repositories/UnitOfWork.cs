@@ -8,13 +8,11 @@ public class UnitOfWork : IUnitOfWork
 
     private IBlogRepository _blogRepository;
 
-    private readonly AppDbContext _context;
 
     private readonly IServiceProvider _serviceProvider;
 
-    public UnitOfWork(AppDbContext context, IServiceProvider serviceProvider)
+    public UnitOfWork(IServiceProvider serviceProvider)
     {
-        _context = context;
         _serviceProvider = serviceProvider;
     }
 
