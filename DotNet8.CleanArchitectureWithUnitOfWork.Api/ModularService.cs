@@ -9,8 +9,8 @@ public static class ModularService
     {
         services
             .AddDbContextService(builder)
-            .AddUnitOfWorkService()
             .AddRepositoryService()
+            .AddUnitOfWorkService()
             .AddJsonService();
 
         return services;
