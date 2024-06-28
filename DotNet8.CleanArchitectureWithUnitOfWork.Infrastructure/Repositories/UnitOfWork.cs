@@ -8,7 +8,6 @@ public class UnitOfWork : IUnitOfWork
 
     private IBlogRepository _blogRepository;
 
-
     private readonly IServiceProvider _serviceProvider;
 
     public UnitOfWork(IServiceProvider serviceProvider)
